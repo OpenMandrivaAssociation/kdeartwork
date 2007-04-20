@@ -86,6 +86,7 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 %_bindir/kxsrun
 %_bindir/kxsconfig
 %_bindir/krotation.kss
+%_bindir/kpendulum.kss
 %dir %_datadir/apps/kscreensaver/
 %_datadir/apps/kscreensaver/*.png
 %dir %_datadir/emoticons/
@@ -157,12 +158,15 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 %_iconsdir/slick/*
 %_datadir/apps/kwin/icewm-themes/MenschMaschine/*
 %_datadir/apps/kwin/icewm-themes/Model/*
-%_datadir/services/ScreenSavers/*.desktop
+%_datadir/kde4/services/ScreenSavers/*.desktop
 %_datadir/wallpapers/*.jpg
 %_datadir/wallpapers/*.desktop
 %_datadir/wallpapers/*.svgz
 %_datadir/wallpapers/*.png
 
+#TODO expand dir
+#TODO (bis) conflict with kdelibs
+%_iconsdir/crystalsvg/*
 
 #-------------------------------------------------------------------------
 
