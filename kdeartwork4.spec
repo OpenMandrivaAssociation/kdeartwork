@@ -9,7 +9,7 @@
 %define _sysconfdir %_prefix/etc/
 %define _docdir %_datadir/doc/
 
-%define branch_date 20070418
+%define branch_date 20070502
 
 %define use_enable_final 1
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -28,7 +28,7 @@
 
 
 Name:		kdeartwork4
-Version:   	3.80.3
+Version:    ·   %version
 Release:    %mkrel 0.%branch_date.1
 Group: 		Graphical desktop/KDE
 Summary: 	Kdeartwork
