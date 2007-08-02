@@ -1,21 +1,10 @@
+%define revision 694291
 
-# remove it when kde4 will be official kde package
-%define _prefix /opt/kde4/
-%define _libdir %_prefix/%_lib
-%define _datadir %_prefix/share/
-%define _bindir %_prefix/bin
-%define _includedir %_prefix/include/
-%define _iconsdir %_datadir/icons/
-%define _sysconfdir %_prefix/etc/
-%define _docdir %_datadir/doc/
+%define use_enable_pie 1
+%{?_no_enable_pie: %{expand: %%global use_enable_pie 0}}
 
-%define branch_date 20070502
-
-%define use_enable_final 1
+%define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
-
-%define compile_apidox 1
-%{?_no_apidox: %{expand: %%global compile_apidox 0}}
 
 %define unstable 1
 %{?_unstable: %{expand: %%global unstable 1}}
@@ -23,25 +12,25 @@
 %define branch 1
 %{?_branch: %{expand: %%global branch 1}}
 
-%define use_enable_pie 1
-%{?_no_enable_pie: %{expand: %%global use_enable_pie 0}}
-
-
-Name:		kdeartwork4
-Version:    ·   %version
-Release:    %mkrel 0.%branch_date.1
-Group: 		Graphical desktop/KDE
-Summary: 	Kdeartwork
-URL:		ftp://ftp.kde.org/pub/kde/stable/%version/src/
-# Source comes from kde branch.
-License:  	GPL
-%if %branch
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version-%branch_date.tar.bz2
-%else
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
+%if %unstable
+%define dont_strip 1
 %endif
-BuildRoot: 	%_tmppath/%name-%version-%release-root
-Packager:	Mandriva Linux KDE Team <kde@mandriva.com>
+
+Name: kdeartwork4
+Summary: K Desktop Environment
+Version: 3.92.0
+Release: %mkrel 0.%revision.1
+Epoch: 1
+Group: Graphical desktop/KDE
+License: GPL
+URL: http://www.kde.org
+%if %branch
+Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.%revision.tar.bz2
+%else
+Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
+%endif
+Buildroot:	%_tmppath/%name-%version-%release-root
+BuildRequires: kde4-macros
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
 BuildRequires: kdebase4-devel 
@@ -56,188 +45,145 @@ BuildRequires:	xscreensaver
 BuildRequires:	xscreensaver-gl
 BuildRequires: mesaglut-devel
 BuildRequires:	mesaglu-devel
-Requires: kdebase4-progs
-
-Patch1:		kdeartwork-3.5.4-fix-screensaver-only-showin-kde.patch
+Requires: kde4-kworldclock
+Requires: %{name}-emoticons
+Requires: %{name}-kwin-icewm-themes
+Requires: %{name}-kscreensaver
+Requires: %{name}-sounds
+Requires: %{name}-styles
+Requires: %{name}-wallpapers
 
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
 %files
 %defattr(-,root,root,-)
+%doc README
+# We will not provide a duplicated icons copy this time
+%exclude %_kde_iconsdir/*
 
-%_bindir/kbanner.kss       
-%_bindir/klines.kss        
-%_bindir/kblob.kss         
-%_bindir/klorenz.kss       
-%_bindir/kpolygon.kss      
-%_bindir/kslideshow.kss    
-%_bindir/kswarm.kss
-%_bindir/kclock.kss
-%_bindir/kpartsaver.kss    
-%_bindir/kscience.kss      
-%_bindir/kvm.kss
-%_bindir/keuphoria.kss
-%_bindir/kflux.kss
-%_bindir/kfountain.kss
-%_bindir/kgravity.kss
-%_bindir/ksolarwinds.kss
-%_bindir/kwave.kss
-%_bindir/kxsrun
-%_bindir/kxsconfig
-%_bindir/krotation.kss
-%_bindir/kpendulum.kss
-%dir %_datadir/apps/kscreensaver/
-%_datadir/apps/kscreensaver/*.png
-%dir %_datadir/emoticons/
-%dir %_datadir/emoticons/tweakers.net/
-%_datadir/emoticons/tweakers.net/*.png
-%_datadir/emoticons/tweakers.net/*.xml
-%dir %_datadir/emoticons/phpBB/
-%_datadir/emoticons/phpBB/*.png
-%_datadir/emoticons/phpBB/*.xml
-%dir %_datadir/emoticons/greggman.com/
-%_datadir/emoticons/greggman.com/*.png
-%_datadir/emoticons/greggman.com/*.xml
-%dir %_datadir/emoticons/ccmathteam.com/
-%_datadir/emoticons/ccmathteam.com/*.png
-%_datadir/emoticons/ccmathteam.com/*.xml
-%dir %_datadir/emoticons/RedOnes/
-%_datadir/emoticons/RedOnes/*.png
-%_datadir/emoticons/RedOnes/*.xml
-%dir %_datadir/emoticons/Plain/
-%_datadir/emoticons/Plain/*.png
-%_datadir/emoticons/Plain/*.xml
-%dir %_datadir/emoticons/KMess/
-%_datadir/emoticons/KMess/*.png
-%_datadir/emoticons/KMess/*.xml
-%dir %_datadir/emoticons/KMess-Violet/
-%_datadir/emoticons/KMess-Violet/*.png
-%_datadir/emoticons/KMess-Violet/*.xml
-%dir %_datadir/emoticons/KMess-Cartoon/
-%_datadir/emoticons/KMess-Cartoon/*.png
-%_datadir/emoticons/KMess-Cartoon/*.xml
-%dir %_datadir/emoticons/KMess-Blue/
-%_datadir/emoticons/KMess-Blue/*.png
-%_datadir/emoticons/KMess-Blue/*.xml
-%dir %_datadir/emoticons/Boxed/
-%_datadir/emoticons/Boxed/*.png
-%_datadir/emoticons/Boxed/*.xml
-%dir %_datadir/emoticons/GroupWise/
-%_datadir/emoticons/GroupWise/emoticons.xml
-%dir %_datadir/apps/kworldclock/
-%dir %_datadir/apps/kworldclock/maps/
-%dir %_datadir/apps/kworldclock/maps/alt/
-%_datadir/apps/kworldclock/maps/alt/*.jpg
-%_datadir/apps/kworldclock/maps/alt/*.desktop
-%dir %_datadir/apps/kworldclock/maps/bio/
-%_datadir/apps/kworldclock/maps/bio/*.jpg
-%_datadir/apps/kworldclock/maps/bio/*.desktop
-%dir %_datadir/apps/kworldclock/maps/caida/
-%_datadir/apps/kworldclock/maps/caida/*.jpg
-%_datadir/apps/kworldclock/maps/caida/*.desktop
-%dir %_datadir/apps/kworldclock/maps/caida_bw/
-%_datadir/apps/kworldclock/maps/caida_bw/*.jpg
-%_datadir/apps/kworldclock/maps/caida_bw/*.desktop
-%dir %_datadir/apps/kworldclock/maps/mggd/
-%_datadir/apps/kworldclock/maps/mggd/*.jpg
-%_datadir/apps/kworldclock/maps/mggd/*.desktop
-%dir %_datadir/apps/kworldclock/maps/rainfall/
-%_datadir/apps/kworldclock/maps/rainfall/*.jpg
-%_datadir/apps/kworldclock/maps/rainfall/*.desktop
-%dir %_datadir/sounds/
-%_datadir/sounds/*.wav
+#----------------------------------------------------------------------
 
-%_datadir/apps/kfiresaver/*.ogg
-%_datadir/apps/kfiresaver/*.desc
-%_datadir/apps/kfiresaver/*.png
-%_iconsdir/Locolor/*
-%_iconsdir/Locolor/index.theme
-%_iconsdir/ikons/*
-%_iconsdir/kids/*
-%_iconsdir/slick/*
-%_datadir/apps/kwin/icewm-themes/MenschMaschine/*
-%_datadir/apps/kwin/icewm-themes/Model/*
-%_datadir/kde4/services/ScreenSavers/*.desktop
-%_datadir/wallpapers/*.jpg
-%_datadir/wallpapers/*.desktop
-%_datadir/wallpapers/*.svgz
-%_datadir/wallpapers/*.png
+%package emoticons
+Summary: %{name} emoticons
+Group: Graphical desktop/KDE
+Requires: %name-core = %version
 
-#TODO expand dir
-#TODO (bis) conflict with kdelibs
-%_iconsdir/crystalsvg/*
+%description emoticons
+%{name} emoticons.
 
-#-------------------------------------------------------------------------
+%files emoticons
+%defattr(-,root,root)
+%_kde_datadir/emoticons/*
 
-%package 	kde-classic
-Summary:    Default Icons from kde4.0 
-Group:      Graphical desktop/KDE
+#---------------------------------------------
 
-%description kde-classic
-Default Icons from kde4.0.
+%package kwin-icewm-themes
+Summary: %{name} kwin-icewm-themes
+Group: Graphical desktop/KDE
+Requires: %name-core = %version
 
-%files kde-classic
-%defattr(-,root,root,-)
-%dir %_iconsdir/kdeclassic/
-%_iconsdir/kdeclassic/*
+%description kwin-icewm-themes
+%{name} icewm-themes.
 
+%files kwin-icewm-themes
+%defattr(-,root,root)
+%_kde_appsdir/kwin/icewm-themes/*
 
-#-------------------------------------------------------------------------
+#---------------------------------------------
 
-%package	screensaver-gl
-Summary:    Screensaver using OpenGL 
-Group:      Graphical desktop/KDE
-Requires:	kdebase4-progs 
-Requires:	%name = %version-%release, xscreensaver-gl
+%package kscreensaver
+Summary: %{name} kscreensaver
+Group: Graphical desktop/KDE
+Requires: %name-core = %version
 
-%description screensaver-gl
-Screensaver using OpenGL.
+%description kscreensaver
+%{name} kscreensaver.
 
-%files screensaver-gl
-%defattr(-,root,root,-)
+%files kscreensaver
+%defattr(-,root,root)
+%_kde_appsdir/kfiresaver
+%_kde_appsdir/kscreensaver
+%_kde_bindir/*.kss
+%_kde_bindir/kxsconfig
+%_kde_bindir/kxsrun
+%_kde_datadir/kde4/services/ScreenSavers/*
 
-#-------------------------------------------------------------------------
+#---------------------------------------------
+
+%package -n kde4-kworldclock
+Summary: %{name} kworldclock
+Group: Graphical desktop/KDE
+Requires: %name-core = %version
+
+%description -n kde4-kworldclock
+%{name} kworldclock.
+
+%files -n kde4-kworldclock
+%defattr(-,root,root)
+%_kde_appsdir/kworldclock
+
+#---------------------------------------------
+
+%package sounds
+Summary: %{name} sounds
+Group: Graphical desktop/KDE
+Requires: %name-core = %version
+
+%description sounds
+%{name} sounds.
+
+%files sounds
+%defattr(-,root,root)
+%_kde_datadir/sounds/KDE_Logout_new.wav
+%_kde_datadir/sounds/KDE_Startup_new.wav
+
+#---------------------------------------------
+
+%package styles
+Summary: %{name} styles
+Group: Graphical desktop/KDE
+Requires: %name-core = %version
+
+%description styles
+%{name} styles.
+
+%files styles
+%defattr(-,root,root)
+%_kde_appsdir/kstyle
+%_kde_libdir/kde4/kstyle_phase_config.so
+%_kde_libdir/kde4/plugins/styles/phasestyle.so
+
+#---------------------------------------------
+
+%package wallpapers
+Summary: %{name} wallpapers
+Group: Graphical desktop/KDE
+Requires: %name-core = %version
+
+%description wallpapers
+%{name} wallpapers.
+
+%files wallpapers
+%defattr(-,root,root)
+%_kde_datadir/wallpapers/*
+
+#----------------------------------------------------------------------
 
 %prep
-%setup  -q -nkdeartwork-%version-%branch_date
+%setup -q -n kdeartwork-%version
 
 %build
-cd $RPM_BUILD_DIR/kdeartwork-%version-%branch_date
-mkdir build
-cd build
-export QTDIR=/usr/lib/qt4/
-export PATH=$QTDIR/bin:$PATH
-
-cmake -DCMAKE_INSTALL_PREFIX=%_prefix \
-%if %use_enable_final
-      -DKDE4_ENABLE_FINAL=ON \
-%endif
-%if %use_enable_pie
-      -DKDE4_ENABLE_FPIE=ON \
-%endif
-%if %unstable
-      -DCMAKE_BUILD_TYPE=Debug \
-%endif
-%if "%{_lib}" != "lib"
-      -DLIB_SUFFIX=64 \
-%endif
-	../
+%cmake_kde4 
 
 %make
 
 %install
-
 rm -fr %buildroot
-cd $RPM_BUILD_DIR/kdeartwork-%version-%branch_date
 cd build
-
-
-export PATH=%_bindir:$PATH
 
 make DESTDIR=%buildroot install
 
 %clean
 rm -fr %buildroot
-
 
