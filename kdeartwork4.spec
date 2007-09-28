@@ -1,4 +1,4 @@
-%define revision 697235
+%define revision 718171
 
 %define use_enable_pie 1
 %{?_no_enable_pie: %{expand: %%global use_enable_pie 0}}
@@ -18,7 +18,7 @@
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 3.92.0
+Version: 3.93.0
 Release: %mkrel 0.%revision.1
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -58,6 +58,16 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
 %files
 %defattr(-,root,root,-)
+
+#----------------------------------------------------------------------
+%package core
+Summary: %{name} core package
+Group: Graphical desktop/KDE
+
+%description core
+%{name} core package
+
+%files core
 %doc README
 # We will not provide a duplicated icons copy this time
 %exclude %_kde_iconsdir/*
