@@ -19,7 +19,7 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 3.94.1
-Release: %mkrel 0.%revision.1
+Release: %mkrel 0.%revision.2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -41,10 +41,11 @@ BuildRequires: lcms-devel
 BuildRequires: mng-devel
 BuildRequires: png-devel 
 BuildRequires: libz-devel 
-BuildRequires:	xscreensaver
-BuildRequires:	xscreensaver-gl
+BuildRequires: xscreensaver
+BuildRequires: xscreensaver-gl
 BuildRequires: mesaglut-devel
-BuildRequires:	mesaglu-devel
+BuildRequires: mesaglu-devel
+BuildRequires: kdebase4-workspace-devel
 Requires: kde4-kworldclock
 Requires: %{name}-emoticons
 Requires: %{name}-kwin-icewm-themes
