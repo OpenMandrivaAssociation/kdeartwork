@@ -1,4 +1,4 @@
-%define revision 728852
+%define revision 737543
 
 %define use_enable_pie 1
 %{?_no_enable_pie: %{expand: %%global use_enable_pie 0}}
@@ -18,7 +18,7 @@
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 3.94.1
+Version: 3.96.0
 Release: %mkrel 0.%revision.2
 Epoch: 1
 Group: Graphical desktop/KDE
