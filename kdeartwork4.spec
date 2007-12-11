@@ -1,4 +1,4 @@
-%define revision 743525
+%define revision 746274
 
 %define use_enable_pie 1
 %{?_no_enable_pie: %{expand: %%global use_enable_pie 0}}
@@ -18,8 +18,8 @@
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 3.96.1
-Release: %mkrel 0.%revision.2
+Version: 3.97.1
+Release: %mkrel 0.%revision.1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
