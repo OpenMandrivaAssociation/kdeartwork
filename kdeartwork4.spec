@@ -29,7 +29,6 @@ Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.%revis
 %else
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 %endif
-Buildroot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kde4-macros
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
