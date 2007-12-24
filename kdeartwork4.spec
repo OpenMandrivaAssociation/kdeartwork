@@ -1,4 +1,4 @@
-%define revision 746274
+%define revision 751522
 
 %define use_enable_pie 1
 %{?_no_enable_pie: %{expand: %%global use_enable_pie 0}}
@@ -19,14 +19,15 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 3.97.1
-Release: %mkrel 0.%revision.1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
 %if %branch
+Release: %mkrel 0.%revision.1
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.%revision.tar.bz2
 %else
+Release: %mkrel 1
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 %endif
 BuildRequires: kde4-macros
