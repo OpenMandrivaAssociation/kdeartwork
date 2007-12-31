@@ -78,7 +78,7 @@ Group: Graphical desktop/KDE
 %package emoticons
 Summary: %{name} emoticons
 Group: Graphical desktop/KDE
-Requires: %name-core = %version
+Requires: %name-core = %epoch:%version
 
 %description emoticons
 %{name} emoticons.
@@ -92,7 +92,7 @@ Requires: %name-core = %version
 %package kwin-icewm-themes
 Summary: %{name} kwin-icewm-themes
 Group: Graphical desktop/KDE
-Requires: %name-core = %version
+Requires: %name-core = %epoch:%version
 
 %description kwin-icewm-themes
 %{name} icewm-themes.
@@ -106,7 +106,7 @@ Requires: %name-core = %version
 %package kscreensaver
 Summary: %{name} kscreensaver
 Group: Graphical desktop/KDE
-Requires: %name-core = %version
+Requires: %name-core = %epoch:%version
 
 %description kscreensaver
 %{name} kscreensaver.
@@ -125,7 +125,7 @@ Requires: %name-core = %version
 %package -n kde4-kworldclock
 Summary: %{name} kworldclock
 Group: Graphical desktop/KDE
-Requires: %name-core = %version
+Requires: %name-core = %epoch:%version
 
 %description -n kde4-kworldclock
 %{name} kworldclock.
@@ -139,7 +139,7 @@ Requires: %name-core = %version
 %package sounds
 Summary: %{name} sounds
 Group: Graphical desktop/KDE
-Requires: %name-core = %version
+Requires: %name-core = %epoch:%version
 
 %description sounds
 %{name} sounds.
@@ -154,7 +154,7 @@ Requires: %name-core = %version
 %package styles
 Summary: %{name} styles
 Group: Graphical desktop/KDE
-Requires: %name-core = %version
+Requires: %name-core = %epoch:%version
 
 %description styles
 %{name} styles.
@@ -170,7 +170,7 @@ Requires: %name-core = %version
 %package wallpapers
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
-Requires: %name-core = %version
+Requires: %name-core = %epoch:%version
 
 %description wallpapers
 %{name} wallpapers.
