@@ -9,7 +9,7 @@
 %define unstable 1
 %{?_unstable: %{expand: %%global unstable 1}}
 
-%define branch 1
+%define branch 0
 %{?_branch: %{expand: %%global branch 1}}
 
 %if %unstable
@@ -18,7 +18,7 @@
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 3.97.1
+Version: 4.0.0
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -54,6 +54,7 @@ Requires: %{name}-kscreensaver
 Requires: %{name}-sounds
 Requires: %{name}-styles
 Requires: %{name}-wallpapers
+Requires: %{name}-color-schemes
 
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
@@ -62,6 +63,7 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 %defattr(-,root,root,-)
 
 #----------------------------------------------------------------------
+
 %package core
 Summary: %{name} core package
 Group: Graphical desktop/KDE
@@ -165,6 +167,19 @@ Requires: %name-core = %epoch:%version
 %_kde_appsdir/kstyle
 %_kde_libdir/kde4/kstyle_phase_config.so
 %_kde_libdir/kde4/plugins/styles/phasestyle.so
+
+#---------------------------------------------
+
+%package color-schemes
+Summary: %{name} color schemes
+Group: Graphical desktop/KDE
+
+%description color-schemes
+%{name} color schemes.
+
+%files color-schemes
+%defattr(-,root,root)
+%_kde_appsdir/color-schemes
 
 #---------------------------------------------
 
