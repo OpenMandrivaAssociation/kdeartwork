@@ -27,7 +27,7 @@ URL: http://www.kde.org
 Release: %mkrel 0.%revision.1
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.%revision.tar.bz2
 %else
-Release: %mkrel 1
+Release: %mkrel 2
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 %endif
 Buildroot:	%_tmppath/%name-%version-%release-root
@@ -47,7 +47,7 @@ BuildRequires: xscreensaver-gl
 BuildRequires: mesaglut-devel
 BuildRequires: mesaglu-devel
 BuildRequires: kdebase4-workspace-devel
-Requires: kde4-kworldclock
+Requires: %{name}-kworldclock
 Requires: %{name}-emoticons
 Requires: %{name}-kwin-icewm-themes
 Requires: %{name}-kscreensaver
@@ -125,15 +125,15 @@ Requires: %name-core = %epoch:%version
 
 #---------------------------------------------
 
-%package -n kde4-kworldclock
+%package -n kworldclock
 Summary: %{name} kworldclock
 Group: Graphical desktop/KDE
 Requires: %name-core = %epoch:%version
 
-%description -n kde4-kworldclock
+%description -n kworldclock
 %{name} kworldclock.
 
-%files -n kde4-kworldclock
+%files -n kworldclock
 %defattr(-,root,root)
 %_kde_appsdir/kworldclock
 
