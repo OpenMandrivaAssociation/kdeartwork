@@ -27,7 +27,7 @@ URL: http://www.kde.org
 Release: %mkrel 0.%revision.1
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.%revision.tar.bz2
 %else
-Release: %mkrel 2
+Release: %mkrel 3
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 %endif
 Buildroot:	%_tmppath/%name-%version-%release-root
@@ -125,15 +125,15 @@ Requires: %name-core = %epoch:%version
 
 #---------------------------------------------
 
-%package -n kworldclock
+%package kworldclock
 Summary: %{name} kworldclock
 Group: Graphical desktop/KDE
 Requires: %name-core = %epoch:%version
 
-%description -n kworldclock
+%description kworldclock
 %{name} kworldclock.
 
-%files -n kworldclock
+%files kworldclock
 %defattr(-,root,root)
 %_kde_appsdir/kworldclock
 
