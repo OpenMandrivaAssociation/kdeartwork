@@ -96,8 +96,6 @@ Requires: %name-core = %epoch:%version
 %_kde_appsdir/kfiresaver
 %_kde_appsdir/kscreensaver
 %_kde_bindir/*.kss
-%_kde_bindir/kxsconfig
-%_kde_bindir/kxsrun
 %_kde_datadir/kde4/services/ScreenSavers/*
 
 #---------------------------------------------
