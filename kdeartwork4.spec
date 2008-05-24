@@ -5,13 +5,12 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Release: %mkrel 1
+Release: %mkrel 2
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 Buildroot:	%_tmppath/%name-%version-%release-root
-BuildRequires: kde4-macros
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
-BuildRequires: kdebase4-devel 
+BuildRequires: kdebase4-devel  >= %version
 BuildRequires: bzip2-devel 
 BuildRequires: libintl 
 BuildRequires: jpeg-devel 
@@ -23,7 +22,7 @@ BuildRequires: xscreensaver
 BuildRequires: xscreensaver-gl
 BuildRequires: mesaglut-devel
 BuildRequires: mesaglu-devel
-BuildRequires: kdebase4-workspace-devel
+BuildRequires: kdebase4-workspace-devel >= %version
 Requires: %{name}-kworldclock
 Requires: %{name}-emoticons
 Requires: %{name}-kwin-icewm-themes
