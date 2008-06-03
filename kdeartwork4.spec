@@ -1,11 +1,11 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.0.80
+Version: 4.0.81
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Release: %mkrel 2
+Release: %mkrel 1
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 Buildroot:	%_tmppath/%name-%version-%release-root
 BuildRequires: X11-devel 
