@@ -20,6 +20,7 @@ BuildRequires: png-devel
 BuildRequires: libz-devel 
 BuildRequires: xscreensaver
 BuildRequires: xscreensaver-gl
+BuildRequires: xscreensaver-base
 BuildRequires: mesaglut-devel
 BuildRequires: mesaglu-devel
 BuildRequires: kdebase4-workspace-devel >= %version
@@ -177,7 +178,7 @@ Requires: %name-core = %epoch:%version
 %setup -q -n kdeartwork-%version
 
 %build
-%cmake_kde4 
+%cmake_kde4
 
 %make
 
