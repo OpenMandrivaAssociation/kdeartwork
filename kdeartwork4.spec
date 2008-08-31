@@ -1,11 +1,11 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.1.0
+Version: 4.1.1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Release: %mkrel 4
+Release: %mkrel 1
 Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 Patch0: slideshow-pre-effects.patch
 Buildroot:	%_tmppath/%name-%version-%release-root
