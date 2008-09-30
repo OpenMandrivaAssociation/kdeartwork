@@ -5,10 +5,10 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Release: %mkrel 1
-Source:	ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
-Patch0: slideshow-pre-effects.patch
-Buildroot:	%_tmppath/%name-%version-%release-root
+Release: %mkrel 2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
+Patch0: slideshow-crossfade_and_effects.patch
+Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
 BuildRequires: kdebase4-devel  >= %version
@@ -177,7 +177,7 @@ Requires: %name-core = %epoch:%version
 
 %prep
 %setup -q -n kdeartwork-%version
-%patch0 -p1 -b .pre-effect
+%patch0 -p1 -b .effects
 
 %build
 %cmake_kde4
