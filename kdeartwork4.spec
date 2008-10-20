@@ -8,6 +8,7 @@ URL: http://www.kde.org
 Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 Patch0: slideshow-crossfade_and_effects.patch
+Patch1: kdeartwork-4.1.70-fix-build.patch
 Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
@@ -178,7 +179,7 @@ Requires: %name-core = %epoch:%version
 %prep
 %setup -q -n kdeartwork-%version
 %patch0 -p1 -b .effects
-
+%patch1 -p1
 %build
 %cmake_kde4
 
