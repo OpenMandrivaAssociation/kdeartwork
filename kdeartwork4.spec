@@ -26,14 +26,21 @@ BuildRequires: xscreensaver-base
 BuildRequires: mesaglut-devel
 BuildRequires: mesaglu-devel
 BuildRequires: kdebase4-workspace-devel >= %version
-Requires: %{name}-kworldclock
-Requires: %{name}-emoticons
-Requires: %{name}-kwin-icewm-themes
-Requires: %{name}-kscreensaver
-Requires: %{name}-sounds
-Requires: %{name}-styles
-Requires: %{name}-wallpapers
-Requires: %{name}-color-schemes
+Suggests: %{name}-kworldclock
+Suggests: %{name}-emoticons
+Suggests: %{name}-kwin-icewm-themes
+Suggests: %{name}-kscreensaver
+Suggests: %{name}-sounds
+Suggests: %{name}-styles
+Suggests: %{name}-wallpapers
+Suggests: %{name}-color-schemes
+Suggests: %{name}-icons-theme-Locolor
+Suggests: %{name}-icons-theme-crystalsvg
+Suggests: %{name}-icons-theme-ikons
+Suggests: %{name}-icons-theme-slick
+Suggests: %{name}-icons-theme-nuvola
+Suggests: %{name}-icons-theme-kids
+Suggests: %{name}-icons-theme-kdeclassic
 
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
