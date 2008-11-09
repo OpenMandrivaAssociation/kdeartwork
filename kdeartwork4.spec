@@ -46,16 +46,113 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 %package core
 Summary: %{name} core package
 Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-Locolor <= 3.5.9-6
 
 %description core
 %{name} core package
 
 %files core
 %doc README
-# We will not provide a duplicated icons copy this time
-%exclude %_kde_iconsdir/*
 
-#----------------------------------------------------------------------
+#-------------------------------------------------------------------------
+
+%package icons-theme-Locolor
+Summary:  Default Icons from kde4
+Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-Locolor <= 3.5.9-6
+
+%description icons-theme-Locolor
+Locolor icons theme
+
+%files icons-theme-Locolor
+%defattr(-,root,root,-)
+%_kde_iconsdir/Locolor
+
+#-------------------------------------------------------------------------
+
+%package icons-theme-crystalsvg
+Summary:  Default Icons from kde4
+Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-crystalsvg <= 3.5.9-6
+
+%description icons-theme-crystalsvg
+Crystalsvg icons theme
+
+%files icons-theme-crystalsvg
+%defattr(-,root,root,-)
+%_kde_iconsdir/crystalsvg
+
+#-------------------------------------------------------------------------
+
+%package icons-theme-ikons
+Summary:  Default Icons from kde4
+Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-ikons <= 3.5.9-6
+
+%description icons-theme-ikons
+Ikons icons theme
+
+%files icons-theme-ikons
+%defattr(-,root,root,-)
+%_kde_iconsdir/ikons
+
+#-------------------------------------------------------------------------
+
+%package icons-theme-slick
+Summary:  Default Icons from kde4
+Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-slick <= 3.5.9-6
+
+%description icons-theme-slick
+Slick icons theme
+
+%files icons-theme-slick
+%defattr(-,root,root,-)
+%_kde_iconsdir/slick
+
+#-------------------------------------------------------------------------
+
+%package icons-theme-nuvola
+Summary:  Default Icons from kde4
+Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-nuvola <= 3.5.9-6
+
+%description icons-theme-nuvola
+Nuvola icons theme
+
+%files icons-theme-nuvola
+%defattr(-,root,root,-)
+%_kde_iconsdir/nuvola
+
+#-------------------------------------------------------------------------
+
+%package icons-theme-kids
+Summary:  Default Icons from kde4
+Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-kids <= 3.5.9-6
+
+%description icons-theme-kids
+kids icons theme
+
+%files icons-theme-kids
+%defattr(-,root,root,-)
+%_kde_iconsdir/kids
+
+#-------------------------------------------------------------------------
+
+%package icons-theme-kdeclassic
+Summary:  Default Icons from kde4
+Group: Graphical desktop/KDE
+Obsoletes: kdeartwork-icons-theme-kdeclassic <= 3.5.9-6
+
+%description icons-theme-kdeclassic
+Kdeclassic icons theme
+
+%files icons-theme-kdeclassic
+%defattr(-,root,root,-)
+%_kde_iconsdir/kdeclassic
+
+#-------------------------------------------------------------------------
 
 %package emoticons
 Summary: %{name} emoticons
@@ -69,7 +166,7 @@ Requires: %name-core = %epoch:%version
 %defattr(-,root,root)
 %_kde_datadir/emoticons/*
 
-#---------------------------------------------
+#-------------------------------------------------------------------------
 
 %package kwin-icewm-themes
 Summary: %{name} kwin-icewm-themes
@@ -83,7 +180,7 @@ Requires: %name-core = %epoch:%version
 %defattr(-,root,root)
 %_kde_appsdir/kwin/icewm-themes/*
 
-#---------------------------------------------
+#-------------------------------------------------------------------------
 
 %package kscreensaver
 Summary: %{name} kscreensaver
@@ -102,7 +199,7 @@ Requires: %name-core = %epoch:%version
 %_kde_bindir/kxsconfig
 %_kde_bindir/kxsrun
 
-#---------------------------------------------
+#-------------------------------------------------------------------------
 
 %package kworldclock
 Summary: %{name} kworldclock
@@ -116,7 +213,7 @@ Requires: %name-core = %epoch:%version
 %defattr(-,root,root)
 %_kde_appsdir/kworldclock
 
-#---------------------------------------------
+#-------------------------------------------------------------------------
 
 %package sounds
 Summary: %{name} sounds
@@ -131,7 +228,7 @@ Requires: %name-core = %epoch:%version
 %_kde_datadir/sounds/KDE_Logout_new.wav
 %_kde_datadir/sounds/KDE_Startup_new.wav
 
-#---------------------------------------------
+#-------------------------------------------------------------------------
 
 %package styles
 Summary: %{name} styles
@@ -147,7 +244,7 @@ Requires: %name-core = %epoch:%version
 %_kde_libdir/kde4/kstyle_phase_config.so
 %_kde_libdir/kde4/plugins/styles/phasestyle.so
 
-#---------------------------------------------
+#-------------------------------------------------------------------------
 
 %package color-schemes
 Summary: %{name} color schemes
@@ -160,7 +257,7 @@ Group: Graphical desktop/KDE
 %defattr(-,root,root)
 %_kde_appsdir/color-schemes
 
-#---------------------------------------------
+#-------------------------------------------------------------------------
 
 %package wallpapers
 Summary: %{name} wallpapers
