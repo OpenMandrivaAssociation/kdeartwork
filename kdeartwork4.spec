@@ -53,6 +53,7 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 %package core
 Summary: %{name} core package
 Group: Graphical desktop/KDE
+Obsoletes: kdearwork <= 3.5.9-6
 
 %description core
 %{name} core package
