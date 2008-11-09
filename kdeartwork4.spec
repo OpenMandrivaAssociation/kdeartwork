@@ -192,6 +192,7 @@ Requires: %name-core = %epoch:%version
 Summary: %{name} kscreensaver
 Group: Graphical desktop/KDE
 Requires: %name-core = %epoch:%version
+Obsoletes: kdeartwork-screensavers <= 3.5.9-6
 
 %description kscreensaver
 %{name} kscreensaver.
