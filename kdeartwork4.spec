@@ -82,26 +82,6 @@ Requires: %name-core = %epoch:%version
 
 #-------------------------------------------------------------------------
 
-%package kscreensaver
-Summary: %{name} kscreensaver
-Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
-Obsoletes: kdeartwork-screensavers <= 3.5.9-6
-
-%description kscreensaver
-%{name} kscreensaver.
-
-%files kscreensaver
-%defattr(-,root,root)
-%_kde_appsdir/kfiresaver
-%_kde_appsdir/kscreensaver
-%_kde_bindir/*.kss
-%_kde_datadir/kde4/services/ScreenSavers/*
-%_kde_bindir/kxsconfig
-%_kde_bindir/kxsrun
-
-#-------------------------------------------------------------------------
-
 %package sounds
 Summary: %{name} sounds
 Group: Graphical desktop/KDE
