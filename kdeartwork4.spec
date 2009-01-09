@@ -26,21 +26,12 @@ BuildRequires: xscreensaver-base
 BuildRequires: mesaglut-devel
 BuildRequires: mesaglu-devel
 BuildRequires: kdebase4-workspace-devel >= %version
-Suggests: %{name}-kworldclock
 Suggests: %{name}-emoticons
-Suggests: %{name}-kwin-icewm-themes
 Suggests: %{name}-kscreensaver
 Suggests: %{name}-sounds
 Suggests: %{name}-styles
 Suggests: %{name}-wallpapers
 Suggests: %{name}-color-schemes
-Suggests: %{name}-icons-theme-Locolor
-Suggests: %{name}-icons-theme-crystalsvg
-Suggests: %{name}-icons-theme-ikons
-Suggests: %{name}-icons-theme-slick
-Suggests: %{name}-icons-theme-nuvola
-Suggests: %{name}-icons-theme-kids
-Suggests: %{name}-icons-theme-kdeclassic
 
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
@@ -60,90 +51,6 @@ Obsoletes: kdearwork <= 3.5.9-6
 
 %files core
 %doc README
-
-#-------------------------------------------------------------------------
-
-%package icons-theme-Locolor
-Summary:  Default Icons from kde4
-Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-icons-theme-Locolor <= 3.5.9-6
-
-%description icons-theme-Locolor
-Locolor icons theme
-
-%files icons-theme-Locolor
-%defattr(-,root,root,-)
-%_kde_iconsdir/Locolor
-
-#-------------------------------------------------------------------------
-
-%package icons-theme-crystalsvg
-Summary:  Default Icons from kde4
-Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-icons-theme-crystalsvg <= 3.5.9-6
-
-%description icons-theme-crystalsvg
-Crystalsvg icons theme
-
-%files icons-theme-crystalsvg
-%defattr(-,root,root,-)
-%_kde_iconsdir/crystalsvg
-
-#-------------------------------------------------------------------------
-
-%package icons-theme-ikons
-Summary:  Default Icons from kde4
-Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-icons-theme-ikons <= 3.5.9-6
-
-%description icons-theme-ikons
-Ikons icons theme
-
-%files icons-theme-ikons
-%defattr(-,root,root,-)
-%_kde_iconsdir/ikons
-
-#-------------------------------------------------------------------------
-
-%package icons-theme-slick
-Summary:  Default Icons from kde4
-Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-icons-theme-slick <= 3.5.9-6
-
-%description icons-theme-slick
-Slick icons theme
-
-%files icons-theme-slick
-%defattr(-,root,root,-)
-%_kde_iconsdir/slick
-
-#-------------------------------------------------------------------------
-
-%package icons-theme-nuvola
-Summary:  Default Icons from kde4
-Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-icons-theme-nuvola <= 3.5.9-6
-
-%description icons-theme-nuvola
-Nuvola icons theme
-
-%files icons-theme-nuvola
-%defattr(-,root,root,-)
-%_kde_iconsdir/nuvola
-
-#-------------------------------------------------------------------------
-
-%package icons-theme-kids
-Summary:  Default Icons from kde4
-Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-icons-theme-kids <= 3.5.9-6
-
-%description icons-theme-kids
-kids icons theme
-
-%files icons-theme-kids
-%defattr(-,root,root,-)
-%_kde_iconsdir/kids
 
 #-------------------------------------------------------------------------
 
@@ -175,20 +82,6 @@ Requires: %name-core = %epoch:%version
 
 #-------------------------------------------------------------------------
 
-%package kwin-icewm-themes
-Summary: %{name} kwin-icewm-themes
-Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
-
-%description kwin-icewm-themes
-%{name} icewm-themes.
-
-%files kwin-icewm-themes
-%defattr(-,root,root)
-%_kde_appsdir/kwin/icewm-themes/*
-
-#-------------------------------------------------------------------------
-
 %package kscreensaver
 Summary: %{name} kscreensaver
 Group: Graphical desktop/KDE
@@ -206,20 +99,6 @@ Obsoletes: kdeartwork-screensavers <= 3.5.9-6
 %_kde_datadir/kde4/services/ScreenSavers/*
 %_kde_bindir/kxsconfig
 %_kde_bindir/kxsrun
-
-#-------------------------------------------------------------------------
-
-%package kworldclock
-Summary: %{name} kworldclock
-Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
-
-%description kworldclock
-%{name} kworldclock.
-
-%files kworldclock
-%defattr(-,root,root)
-%_kde_appsdir/kworldclock
 
 #-------------------------------------------------------------------------
 
@@ -279,7 +158,109 @@ Requires: %name-core = %epoch:%version
 %defattr(-,root,root)
 %_kde_datadir/wallpapers/*
 
-#----------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-heron
+Summary: Plasma heron desktopthemes
+Group: Graphical desktop/KDE
+Requires: kdebase4-workspace
+Provides: plasma-desktoptheme
+Requires: plasma-desktoptheme-default
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-heron
+Plasma heron desktopthemes.
+
+%files -n plasma-desktoptheme-heron
+%defattr(-,root,root)
+%_kde_appsdir/desktoptheme/heron
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-aya
+Summary: Plasma aya desktopthemes
+Group: Graphical desktop/KDE
+Requires: kdebase4-workspace
+Provides: plasma-desktoptheme
+Requires: plasma-desktoptheme-default
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-aya
+Plasma aya desktopthemes.
+
+%files -n plasma-desktoptheme-aya
+%defattr(-,root,root)
+%_kde_appsdir/desktoptheme/Aya
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-slim-glow
+Summary: Plasma slim-glow desktopthemes
+Group: Graphical desktop/KDE
+Requires: kdebase4-workspace
+Provides: plasma-desktoptheme
+Requires: plasma-desktoptheme-default
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-slim-glow
+Plasma slim-glow desktopthemes.
+
+%files -n plasma-desktoptheme-slim-glow
+%defattr(-,root,root)
+%_kde_appsdir/desktoptheme/slim-glow
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-silicon
+Summary: Plasma silicon desktopthemes
+Group: Graphical desktop/KDE
+Requires: kdebase4-workspace
+Provides: plasma-desktoptheme
+Requires: plasma-desktoptheme-default
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-silicon
+Plasma silicon desktopthemes.
+
+%files -n plasma-desktoptheme-silicon
+%defattr(-,root,root)
+%_kde_appsdir/desktoptheme/Silicon
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-elegance
+Summary: Plasma elegance desktopthemes
+Group: Graphical desktop/KDE
+Requires: kdebase4-workspace
+Provides: plasma-desktoptheme
+Requires: plasma-desktoptheme-default
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-elegance
+Plasma elegance desktopthemes.
+
+%files -n plasma-desktoptheme-elegance
+%defattr(-,root,root)
+%_kde_appsdir/desktoptheme/Elegance
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-clean-blend
+Summary: Plasma Clean-Blend desktopthemes
+Group: Graphical desktop/KDE
+Requires: kdebase4-workspace
+Provides: plasma-desktoptheme
+Requires: plasma-desktoptheme-default
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-clean-blend
+Plasma Clean-Blend desktopthemes.
+
+%files -n plasma-desktoptheme-clean-blend
+%defattr(-,root,root)
+%_kde_appsdir/desktoptheme/Clean-Blend
+
+#-----------------------------------------------------------------------------
 
 %prep
 %setup -q -n kdeartwork-%version
