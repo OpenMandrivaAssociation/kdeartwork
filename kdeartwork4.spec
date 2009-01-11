@@ -5,7 +5,7 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Release: %mkrel 1
+Release: %mkrel 2
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 Patch0: slideshow-crossfade_and_effects.patch
 Patch1: kdeartwork-4.1.70-fix-build.patch
@@ -241,6 +241,26 @@ Plasma Clean-Blend desktopthemes.
 %_kde_appsdir/desktoptheme/Clean-Blend
 
 #-----------------------------------------------------------------------------
+
+%package kscreensaver
+Summary: %{name} kscreensaver
+Group: Graphical desktop/KDE
+Requires: %name-core = %epoch:%version
+Obsoletes: kdeartwork-screensavers <= 3.5.9-6
+
+%description kscreensaver
+%{name} kscreensaver.
+
+%files kscreensaver
+%defattr(-,root,root)
+%_kde_appsdir/kfiresaver
+%_kde_appsdir/kscreensaver
+%_kde_bindir/*.kss
+%_kde_datadir/kde4/services/ScreenSavers/*
+%_kde_bindir/kxsconfig
+%_kde_bindir/kxsrun
+
+#-------------------------------------------------------------------------
 
 %prep
 %setup -q -n kdeartwork-%version
