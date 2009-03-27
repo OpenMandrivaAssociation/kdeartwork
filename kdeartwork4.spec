@@ -1,6 +1,6 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.2.1
+Version: 4.2.2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
