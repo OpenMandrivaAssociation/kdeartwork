@@ -1,11 +1,11 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 4.2.2
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 Patch0: slideshow-crossfade_and_effects.patch
 Patch1: kdeartwork-4.1.70-fix-build.patch
@@ -32,24 +32,13 @@ Suggests: %{name}-sounds
 Suggests: %{name}-styles
 Suggests: %{name}-wallpapers
 Suggests: %{name}-color-schemes
+Obsoletes: kdeartwork4-core
 
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
 %files
 %defattr(-,root,root,-)
-
-#----------------------------------------------------------------------
-
-%package core
-Summary: %{name} core package
-Group: Graphical desktop/KDE
-Obsoletes: kdearwork <= 3.5.9-6
-
-%description core
-%{name} core package
-
-%files core
 %doc README
 
 #-------------------------------------------------------------------------
@@ -71,7 +60,6 @@ Kdeclassic icons theme
 %package emoticons
 Summary: %{name} emoticons
 Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
 
 %description emoticons
 %{name} emoticons.
@@ -85,7 +73,6 @@ Requires: %name-core = %epoch:%version
 %package sounds
 Summary: %{name} sounds
 Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
 
 %description sounds
 %{name} sounds.
@@ -100,7 +87,6 @@ Requires: %name-core = %epoch:%version
 %package styles
 Summary: %{name} styles
 Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
 
 %description styles
 %{name} styles.
@@ -129,7 +115,6 @@ Group: Graphical desktop/KDE
 %package wallpapers
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
 
 %description wallpapers
 %{name} wallpapers.
@@ -143,9 +128,7 @@ Requires: %name-core = %epoch:%version
 %package -n plasma-desktoptheme-heron
 Summary: Plasma heron desktopthemes
 Group: Graphical desktop/KDE
-Requires: kdebase4-workspace
 Provides: plasma-desktoptheme
-Requires: plasma-desktoptheme-default
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-heron
@@ -160,9 +143,7 @@ Plasma heron desktopthemes.
 %package -n plasma-desktoptheme-aya
 Summary: Plasma aya desktopthemes
 Group: Graphical desktop/KDE
-Requires: kdebase4-workspace
 Provides: plasma-desktoptheme
-Requires: plasma-desktoptheme-default
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-aya
@@ -177,9 +158,7 @@ Plasma aya desktopthemes.
 %package -n plasma-desktoptheme-slim-glow
 Summary: Plasma slim-glow desktopthemes
 Group: Graphical desktop/KDE
-Requires: kdebase4-workspace
 Provides: plasma-desktoptheme
-Requires: plasma-desktoptheme-default
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-slim-glow
@@ -194,9 +173,7 @@ Plasma slim-glow desktopthemes.
 %package -n plasma-desktoptheme-silicon
 Summary: Plasma silicon desktopthemes
 Group: Graphical desktop/KDE
-Requires: kdebase4-workspace
 Provides: plasma-desktoptheme
-Requires: plasma-desktoptheme-default
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-silicon
@@ -211,9 +188,7 @@ Plasma silicon desktopthemes.
 %package -n plasma-desktoptheme-elegance
 Summary: Plasma elegance desktopthemes
 Group: Graphical desktop/KDE
-Requires: kdebase4-workspace
 Provides: plasma-desktoptheme
-Requires: plasma-desktoptheme-default
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-elegance
@@ -228,9 +203,7 @@ Plasma elegance desktopthemes.
 %package -n plasma-desktoptheme-clean-blend
 Summary: Plasma Clean-Blend desktopthemes
 Group: Graphical desktop/KDE
-Requires: kdebase4-workspace
 Provides: plasma-desktoptheme
-Requires: plasma-desktoptheme-default
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-clean-blend
@@ -245,7 +218,6 @@ Plasma Clean-Blend desktopthemes.
 %package kscreensaver
 Summary: %{name} kscreensaver
 Group: Graphical desktop/KDE
-Requires: %name-core = %epoch:%version
 Obsoletes: kdeartwork-screensavers <= 3.5.9-6
 
 %description kscreensaver
