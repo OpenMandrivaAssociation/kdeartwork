@@ -1,14 +1,15 @@
+%define kderevision svn954171
+
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.2.2
-Release: %mkrel 2
+Version: 4.2.70
+Release: %mkrel 0.%kderevision.1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.%kderevision.tar.bz2
 Patch0: slideshow-crossfade_and_effects.patch
-Patch1: kdeartwork-4.1.70-fix-build.patch
 Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
@@ -235,9 +236,8 @@ Obsoletes: kdeartwork-screensavers <= 3.5.9-6
 #-------------------------------------------------------------------------
 
 %prep
-%setup -q -n kdeartwork-%version
-%patch0 -p1 -b .effects
-%patch1 -p1
+%setup -q -n kdeartwork-%version.%kderevision
+#%patch0 -p1 -b .effects
 
 %build
 %cmake_kde4
