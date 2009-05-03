@@ -44,17 +44,17 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
 #-------------------------------------------------------------------------
 
-%package icons-theme-kdeclassic
+%package icons-theme-nuvola
 Summary:  Default Icons from kde4
 Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-icons-theme-kdeclassic <= 3.5.9-6
+Obsoletes: kdeartwork-icons-theme-nuvola <= 3.5.9-6
 
-%description icons-theme-kdeclassic
-Kdeclassic icons theme
+%description icons-theme-nuvola
+nuvola icons theme
 
-%files icons-theme-kdeclassic
+%files icons-theme-nuvola
 %defattr(-,root,root,-)
-%_kde_iconsdir/kdeclassic
+%_kde_iconsdir/nuvola
 
 #-------------------------------------------------------------------------
 
