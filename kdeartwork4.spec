@@ -1,25 +1,12 @@
-
-%define branch 0
-%{?_branch: %{expand: %%global branch 1}}
-
-%if %branch
-%define kderevision svn973768
-%endif
-
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.2.96
+Version: 4.2.98
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-%if %branch
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version%kderevision.tar.bz2
-%else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
-%endif
-Patch0: slideshow-crossfade_and_effects.patch
 Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
@@ -246,13 +233,7 @@ Obsoletes: kdeartwork-screensavers <= 3.5.9-6
 #-------------------------------------------------------------------------
 
 %prep
-%if %branch
-%setup -q -n kdeartwork-%version%kderevision
-%else
 %setup -q -n kdeartwork-%version
-%endif
-
-#%patch0 -p1 -b .effects
 
 %build
 %cmake_kde4
@@ -261,9 +242,8 @@ Obsoletes: kdeartwork-screensavers <= 3.5.9-6
 
 %install
 rm -fr %buildroot
-cd build
 
-make DESTDIR=%buildroot install
+%makeinstall_std -C build
 
 %clean
 rm -fr %buildroot
