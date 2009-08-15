@@ -1,7 +1,7 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 4.3.0
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -31,7 +31,22 @@ Suggests: %{name}-styles
 Suggests: %{name}-wallpapers
 Suggests: %{name}-color-schemes
 Obsoletes: kdeartwork4-core
-
+%if %mdkversion >= 201000
+Obsoletes:     kdemoreartwork-plastik < 3.5.3
+Obsoletes:     kde-style-phase kde-theme-phase
+Obsoletes:     kwin-style-smoothblend
+Obsoletes:     kdearwork3 < 3.5.10-1
+Obsoletes:     kdearwork3-icons-theme-kdeclassic < 3.5.10-1
+Obsoletes:     kdearwork-icons-theme-kdeclassic < 3.5.10-1
+Obsoletes:     kdearwork3-icons-theme-Locolor < 3.5.10-1
+Obsoletes:     kdearwork-icons-theme-Locolor < 3.5.10-1
+Obsoletes:     kdearwork3-icons-theme-ikons < 3.5.10-1
+Obsoletes:     kdearwork-icons-theme-ikons < 3.5.10-1
+Obsoletes:     kdearwork3-icons-theme-kids < 3.5.10-1
+Obsoletes:     kdearwork-icons-theme-kids < 3.5.10-1
+Obsoletes:     kdearwork3-icons-theme-slick < 3.5.10-1
+Obsoletes:     kdearwork-icons-theme-slick < 3.5.10-1
+%endif
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
@@ -216,7 +231,12 @@ Plasma Clean-Blend desktopthemes.
 %package kscreensaver
 Summary: %{name} kscreensaver
 Group: Graphical desktop/KDE
-Obsoletes: kdeartwork-screensavers <= 3.5.9-6
+%if %mdkversion >= 201000
+Obsoletes: kdeartwork-screensavers < 3.5.10-1
+Obsoletes: kdeartwork3-screensavers < 3.5.10-1
+Obsoletes: kdeartwork-screensavers-gl < 3.5.10-1
+Obsoletes: kdeartwork3-screensavers-gl < 3.5.10-1
+%endif
 
 %description kscreensaver
 %{name} kscreensaver.
