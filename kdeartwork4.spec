@@ -1,7 +1,7 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.3.0
-Release: %mkrel 2
+Version: 4.3.1
+Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
