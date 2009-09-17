@@ -1,7 +1,7 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 4.3.1
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -36,6 +36,7 @@ Obsoletes:     kdemoreartwork-plastik < 3.5.3
 Obsoletes:     kde-style-phase kde-theme-phase
 Obsoletes:     kwin-style-smoothblend
 Obsoletes:     kdearwork3 < 3.5.10-1
+Obsoletes:     kdeartwork < 3.5.10-1
 Obsoletes:     kdearwork3-icons-theme-kdeclassic < 3.5.10-1
 Obsoletes:     kdearwork-icons-theme-kdeclassic < 3.5.10-1
 Obsoletes:     kdearwork3-icons-theme-Locolor < 3.5.10-1
