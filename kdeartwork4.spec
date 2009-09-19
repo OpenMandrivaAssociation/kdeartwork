@@ -1,7 +1,7 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 4.3.1
-Release: %mkrel 2
+Release: %mkrel 3
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -24,6 +24,7 @@ BuildRequires: xscreensaver-base
 BuildRequires: mesaglut-devel
 BuildRequires: mesaglu-devel
 BuildRequires: kdebase4-workspace-devel >= %version
+BuildRequires: eigen2
 Suggests: %{name}-emoticons
 Suggests: %{name}-kscreensaver
 Suggests: %{name}-sounds
