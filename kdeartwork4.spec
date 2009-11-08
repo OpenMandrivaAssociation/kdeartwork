@@ -1,12 +1,14 @@
+%define kde_snapshot svn1040395
+
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.3.2
+Version: 4.3.73
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version%kde_snapshot.tar.bz2
 Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: X11-devel 
 BuildRequires: freetype2-devel
@@ -255,7 +257,7 @@ Obsoletes: kdeartwork3-screensavers-gl < 3.5.10-1
 #-------------------------------------------------------------------------
 
 %prep
-%setup -q -n kdeartwork-%version
+%setup -q -n kdeartwork-%version%kde_snapshot
 
 %build
 %cmake_kde4
