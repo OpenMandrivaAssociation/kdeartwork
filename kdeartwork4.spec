@@ -8,7 +8,7 @@
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.4.1
+Version: 4.4.2
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
