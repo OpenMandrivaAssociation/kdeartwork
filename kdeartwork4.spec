@@ -3,12 +3,12 @@
 
 
 %if %branch
-%define kde_snapshot svn1053190
+%define kde_snapshot svn1138650
 %endif
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.4.3
+Version: 4.4.95
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -149,6 +149,32 @@ Group: Graphical desktop/KDE
 %files wallpapers
 %defattr(-,root,root)
 %_kde_datadir/wallpapers/*
+
+#-------------------------------------------------------------------------
+
+%package aurorae-themes-air-oxygen
+Summary: %{name} wallpapers
+Group: Graphical desktop/KDE
+
+%description aurorae-themes-air-oxygen
+%{name} wallpapers.
+
+%files aurorae-themes-air-oxygen
+%defattr(-,root,root)
+%_kde_appsdir/aurorae/themes/Air-Oxygen
+
+#-------------------------------------------------------------------------
+
+%package aurorae-themes-oxygen
+Summary: %{name} wallpapers
+Group: Graphical desktop/KDE
+
+%description aurorae-themes-oxygen
+%{name} wallpapers.
+
+%files aurorae-themes-oxygen
+%defattr(-,root,root)
+%_kde_appsdir/aurorae/themes/Oxygen
 
 #-----------------------------------------------------------------------------
 
