@@ -1,14 +1,14 @@
-%define branch 0
+%define branch 1
 %{?_branch: %{expand: %%global branch 1}}
 
 
 %if %branch
-%define kde_snapshot svn1138650
+%define kde_snapshot svn1170578
 %endif
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.5.0
+Version: 4.5.67
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -44,23 +44,6 @@ Suggests: %{name}-styles
 Suggests: %{name}-wallpapers
 Suggests: %{name}-color-schemes
 Obsoletes: kdeartwork4-core
-%if %mdkversion >= 201000
-Obsoletes:     kdemoreartwork-plastik < 3.5.3
-Obsoletes:     kde-style-phase kde-theme-phase
-Obsoletes:     kwin-style-smoothblend
-Obsoletes:     kdearwork3 < 3.5.10-1
-Obsoletes:     kdeartwork < 3.5.10-1
-Obsoletes:     kdearwork3-icons-theme-kdeclassic < 3.5.10-1
-Obsoletes:     kdearwork-icons-theme-kdeclassic < 3.5.10-1
-Obsoletes:     kdearwork3-icons-theme-Locolor < 3.5.10-1
-Obsoletes:     kdearwork-icons-theme-Locolor < 3.5.10-1
-Obsoletes:     kdearwork3-icons-theme-ikons < 3.5.10-1
-Obsoletes:     kdearwork-icons-theme-ikons < 3.5.10-1
-Obsoletes:     kdearwork3-icons-theme-kids < 3.5.10-1
-Obsoletes:     kdearwork-icons-theme-kids < 3.5.10-1
-Obsoletes:     kdearwork3-icons-theme-slick < 3.5.10-1
-Obsoletes:     kdearwork-icons-theme-slick < 3.5.10-1
-%endif
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
