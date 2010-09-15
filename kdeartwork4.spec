@@ -8,7 +8,7 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 4.5.68
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -45,6 +45,7 @@ Summary:  Default Icons from kde4
 Group: Graphical desktop/KDE
 Buildarch: noarch
 Obsoletes: kdeartwork-icons-theme-nuvola <= 3.5.9-6
+Obsoletes: %name-icons-theme-nuvola < %epoch:%version-%release
 
 %description icons-theme-nuvola
 nuvola icons theme
@@ -59,6 +60,7 @@ nuvola icons theme
 Summary: %{name} emoticons
 Group: Graphical desktop/KDE
 Buildarch: noarch
+Obsoletes: %name-emoticons < %epoch:%version-%release
 
 %description emoticons
 %{name} emoticons.
@@ -73,6 +75,7 @@ Buildarch: noarch
 Summary: %{name} sounds
 Group: Graphical desktop/KDE
 Buildarch: noarch
+Obsoletes: %name-sounds < %epoch:%version-%release
 
 %description sounds
 %{name} sounds.
@@ -120,6 +123,7 @@ Conflicts: kdebase-workspace < 2:4.5.68
 Summary: %{name} color schemes
 Group: Graphical desktop/KDE
 Buildarch: noarch
+Obsoletes: %name-color-schemes < %epoch:%version-%release
 
 %description color-schemes
 %{name} color schemes.
@@ -134,6 +138,7 @@ Buildarch: noarch
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
 Buildarch: noarch
+Obsoletes: %name-wallpapers < %epoch:%version-%release
 
 %description wallpapers
 %{name} wallpapers.
@@ -148,6 +153,7 @@ Buildarch: noarch
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
 Buildarch: noarch
+Obsoletes: %name-aurorae-themes-air-oxygen < %epoch:%version-%release
 
 %description aurorae-themes-air-oxygen
 %{name} wallpapers.
@@ -162,6 +168,7 @@ Buildarch: noarch
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
 Buildarch: noarch
+Obsoletes: %name-aurorae-themes-oxygen < %epoch:%version-%release
 
 %description aurorae-themes-oxygen
 %{name} wallpapers.
@@ -178,6 +185,7 @@ Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
 Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
+Obsoletes: plasma-desktoptheme-heron < %epoch:%version-%release
 
 %description -n plasma-desktoptheme-heron
 Plasma heron desktopthemes.
@@ -194,6 +202,7 @@ Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
 Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
+Obsoletes: plasma-desktoptheme-aya < %epoch:%version-%release
 
 %description -n plasma-desktoptheme-aya
 Plasma aya desktopthemes.
@@ -210,6 +219,7 @@ Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
 Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
+Obsoletes: plasma-desktoptheme-slim-glow < %epoch:%version-%release
 
 %description -n plasma-desktoptheme-slim-glow
 Plasma slim-glow desktopthemes.
@@ -226,6 +236,7 @@ Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
 Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
+Obsoletes: plasma-desktoptheme-silicon < %epoch:%version-%release
 
 %description -n plasma-desktoptheme-silicon
 Plasma silicon desktopthemes.
@@ -242,6 +253,7 @@ Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
 Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
+Obsoletes: plasma-desktoptheme-elegance < %epoch:%version-%release
 
 %description -n plasma-desktoptheme-elegance
 Plasma elegance desktopthemes.
@@ -258,6 +270,7 @@ Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
 Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
+Obsoletes: plasma-desktoptheme-clean-blend < %epoch:%version-%release
 
 %description -n plasma-desktoptheme-clean-blend
 Plasma Clean-Blend desktopthemes.
@@ -277,6 +290,7 @@ Obsoletes: kdeartwork3-screensavers < 3.5.10-1
 Obsoletes: kdeartwork-screensavers-gl < 3.5.10-1
 Obsoletes: kdeartwork3-screensavers-gl < 3.5.10-1
 %endif
+Obsoletes: %name-kscreensaver < %epoch:%version-%release
 
 %description kscreensaver
 %{name} kscreensaver.
