@@ -1,42 +1,28 @@
 %define branch 1
 %{?_branch: %{expand: %%global branch 1}}
 
-
 %if %branch
-%define kde_snapshot svn1170578
+%define kde_snapshot svn1174542
 %endif
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.5.67
+Version: 4.5.68
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
 %if %branch
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version%kde_snapshot.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/kdeartwork-%version%kde_snapshot.tar.bz2
 %else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
 %endif
 Buildroot: %_tmppath/%name-%version-%release-root
-BuildRequires: X11-devel 
-BuildRequires: freetype2-devel
-BuildRequires: kdebase4-devel  >= %version
-BuildRequires: bzip2-devel 
-BuildRequires: libintl 
-BuildRequires: jpeg-devel 
-BuildRequires: lcms-devel 
-BuildRequires: mng-devel
-BuildRequires: png-devel 
-BuildRequires: libz-devel 
-BuildRequires: xscreensaver
-BuildRequires: xscreensaver-gl
 BuildRequires: xscreensaver-base
-BuildRequires: mesaglut-devel
 BuildRequires: mesaglu-devel
-BuildRequires: kdebase4-workspace-devel >= %version
 BuildRequires: eigen2
+BuildRequires: kdebase4-workspace-devel >= %version
 Suggests: %{name}-emoticons
 Suggests: %{name}-kscreensaver
 Suggests: %{name}-sounds
@@ -44,6 +30,7 @@ Suggests: %{name}-styles
 Suggests: %{name}-wallpapers
 Suggests: %{name}-color-schemes
 Obsoletes: kdeartwork4-core
+
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
@@ -56,6 +43,7 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 %package icons-theme-nuvola
 Summary:  Default Icons from kde4
 Group: Graphical desktop/KDE
+Buildarch: noarch
 Obsoletes: kdeartwork-icons-theme-nuvola <= 3.5.9-6
 
 %description icons-theme-nuvola
@@ -70,6 +58,7 @@ nuvola icons theme
 %package emoticons
 Summary: %{name} emoticons
 Group: Graphical desktop/KDE
+Buildarch: noarch
 
 %description emoticons
 %{name} emoticons.
@@ -83,6 +72,7 @@ Group: Graphical desktop/KDE
 %package sounds
 Summary: %{name} sounds
 Group: Graphical desktop/KDE
+Buildarch: noarch
 
 %description sounds
 %{name} sounds.
@@ -97,6 +87,7 @@ Group: Graphical desktop/KDE
 %package styles
 Summary: %{name} styles
 Group: Graphical desktop/KDE
+Conflicts: kdebase-workspace < 2:4.5.68
 
 %description styles
 %{name} styles.
@@ -106,12 +97,29 @@ Group: Graphical desktop/KDE
 %_kde_appsdir/kstyle
 %_kde_libdir/kde4/kstyle_phase_config.so
 %_kde_libdir/kde4/plugins/styles/phasestyle.so
+%_kde_libdir/kde4/kwin3_kde2.so
+%_kde_libdir/kde4/kwin3_keramik.so
+%_kde_libdir/kde4/kwin3_modernsys.so
+%_kde_libdir/kde4/kwin3_quartz.so
+%_kde_libdir/kde4/kwin3_redmond.so
+%_kde_libdir/kde4/kwin3_web.so
+%_kde_libdir/kde4/kwin_kde2_config.so
+%_kde_libdir/kde4/kwin_keramik_config.so
+%_kde_libdir/kde4/kwin_modernsys_config.so
+%_kde_libdir/kde4/kwin_quartz_config.so
+%_kde_appsdir/kwin/kde2.desktop
+%_kde_appsdir/kwin/keramik.desktop
+%_kde_appsdir/kwin/modernsystem.desktop
+%_kde_appsdir/kwin/quartz.desktop
+%_kde_appsdir/kwin/redmond.desktop
+%_kde_appsdir/kwin/web.desktop
 
 #-------------------------------------------------------------------------
 
 %package color-schemes
 Summary: %{name} color schemes
 Group: Graphical desktop/KDE
+Buildarch: noarch
 
 %description color-schemes
 %{name} color schemes.
@@ -125,6 +133,7 @@ Group: Graphical desktop/KDE
 %package wallpapers
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
+Buildarch: noarch
 
 %description wallpapers
 %{name} wallpapers.
@@ -138,6 +147,7 @@ Group: Graphical desktop/KDE
 %package aurorae-themes-air-oxygen
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
+Buildarch: noarch
 
 %description aurorae-themes-air-oxygen
 %{name} wallpapers.
@@ -151,6 +161,7 @@ Group: Graphical desktop/KDE
 %package aurorae-themes-oxygen
 Summary: %{name} wallpapers
 Group: Graphical desktop/KDE
+Buildarch: noarch
 
 %description aurorae-themes-oxygen
 %{name} wallpapers.
@@ -165,6 +176,7 @@ Group: Graphical desktop/KDE
 Summary: Plasma heron desktopthemes
 Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
+Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-heron
@@ -180,6 +192,7 @@ Plasma heron desktopthemes.
 Summary: Plasma aya desktopthemes
 Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
+Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-aya
@@ -195,6 +208,7 @@ Plasma aya desktopthemes.
 Summary: Plasma slim-glow desktopthemes
 Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
+Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-slim-glow
@@ -210,6 +224,7 @@ Plasma slim-glow desktopthemes.
 Summary: Plasma silicon desktopthemes
 Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
+Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-silicon
@@ -225,6 +240,7 @@ Plasma silicon desktopthemes.
 Summary: Plasma elegance desktopthemes
 Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
+Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-elegance
@@ -240,6 +256,7 @@ Plasma elegance desktopthemes.
 Summary: Plasma Clean-Blend desktopthemes
 Group: Graphical desktop/KDE
 Provides: plasma-desktoptheme
+Buildarch: noarch
 Conflicts: extragear-plasma < 4.0.82
 
 %description -n plasma-desktoptheme-clean-blend
@@ -273,7 +290,7 @@ Obsoletes: kdeartwork3-screensavers-gl < 3.5.10-1
 %_kde_bindir/kxsconfig
 %_kde_bindir/kxsrun
 
-#-------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
 
 %prep
 %if %branch
@@ -284,7 +301,6 @@ Obsoletes: kdeartwork3-screensavers-gl < 3.5.10-1
 
 %build
 %cmake_kde4
-
 %make
 
 %install
