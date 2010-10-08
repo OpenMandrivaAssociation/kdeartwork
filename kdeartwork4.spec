@@ -2,13 +2,17 @@
 %{?_branch: %{expand: %%global branch 1}}
 
 %if %branch
-%define kde_snapshot svn1174542
+%define kde_snapshot svn1183776
 %endif
 
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.5.68
-Release: %mkrel 2
+Version: 4.5.71
+%if %branch
+Release: %mkrel -c %kde_snapshot 1
+%else
+Release: %mkrel 1
+%endif
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -22,7 +26,8 @@ Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: xscreensaver-base
 BuildRequires: mesaglu-devel
 BuildRequires: eigen2
-BuildRequires: kdebase4-workspace-devel >= %version
+BuildRequires: kdebase4-workspace-devel >= 2:%version
+BuildRequires: kdegraphics4-devel
 Suggests: %{name}-emoticons
 Suggests: %{name}-kscreensaver
 Suggests: %{name}-sounds
