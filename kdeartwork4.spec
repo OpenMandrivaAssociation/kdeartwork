@@ -184,23 +184,6 @@ Obsoletes: %name-aurorae-themes-oxygen < %epoch:%version-%release
 
 #-----------------------------------------------------------------------------
 
-%package -n plasma-desktoptheme-heron
-Summary: Plasma heron desktopthemes
-Group: Graphical desktop/KDE
-Provides: plasma-desktoptheme
-Buildarch: noarch
-Conflicts: extragear-plasma < 4.0.82
-Obsoletes: plasma-desktoptheme-heron < %epoch:%version-%release
-
-%description -n plasma-desktoptheme-heron
-Plasma heron desktopthemes.
-
-%files -n plasma-desktoptheme-heron
-%defattr(-,root,root)
-%_kde_appsdir/desktoptheme/heron
-
-#-----------------------------------------------------------------------------
-
 %package -n plasma-desktoptheme-aya
 Summary: Plasma aya desktopthemes
 Group: Graphical desktop/KDE
@@ -232,57 +215,6 @@ Plasma slim-glow desktopthemes.
 %files -n plasma-desktoptheme-slim-glow
 %defattr(-,root,root)
 %_kde_appsdir/desktoptheme/slim-glow
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-silicon
-Summary: Plasma silicon desktopthemes
-Group: Graphical desktop/KDE
-Provides: plasma-desktoptheme
-Buildarch: noarch
-Conflicts: extragear-plasma < 4.0.82
-Obsoletes: plasma-desktoptheme-silicon < %epoch:%version-%release
-
-%description -n plasma-desktoptheme-silicon
-Plasma silicon desktopthemes.
-
-%files -n plasma-desktoptheme-silicon
-%defattr(-,root,root)
-%_kde_appsdir/desktoptheme/Silicon
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-elegance
-Summary: Plasma elegance desktopthemes
-Group: Graphical desktop/KDE
-Provides: plasma-desktoptheme
-Buildarch: noarch
-Conflicts: extragear-plasma < 4.0.82
-Obsoletes: plasma-desktoptheme-elegance < %epoch:%version-%release
-
-%description -n plasma-desktoptheme-elegance
-Plasma elegance desktopthemes.
-
-%files -n plasma-desktoptheme-elegance
-%defattr(-,root,root)
-%_kde_appsdir/desktoptheme/Elegance
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-clean-blend
-Summary: Plasma Clean-Blend desktopthemes
-Group: Graphical desktop/KDE
-Provides: plasma-desktoptheme
-Buildarch: noarch
-Conflicts: extragear-plasma < 4.0.82
-Obsoletes: plasma-desktoptheme-clean-blend < %epoch:%version-%release
-
-%description -n plasma-desktoptheme-clean-blend
-Plasma Clean-Blend desktopthemes.
-
-%files -n plasma-desktoptheme-clean-blend
-%defattr(-,root,root)
-%_kde_appsdir/desktoptheme/Clean-Blend
 
 #-----------------------------------------------------------------------------
 
