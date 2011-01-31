@@ -11,7 +11,7 @@ Version: 4.6.0
 %if %branch
 Release: %mkrel -c %kde_snapshot 1
 %else
-Release: %mkrel 2
+Release: %mkrel 1
 %endif
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -28,6 +28,7 @@ BuildRequires: mesaglu-devel
 BuildRequires: eigen2
 BuildRequires: kdebase4-workspace-devel >= 2:%version
 BuildRequires: kdegraphics4-devel
+BuildRequires: libxt-devel
 Suggests: %{name}-emoticons
 Suggests: %{name}-kscreensaver
 Suggests: %{name}-sounds
