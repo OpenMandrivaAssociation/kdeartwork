@@ -9,9 +9,9 @@ Name: kdeartwork4
 Summary: K Desktop Environment
 Version: 4.6.2
 %if %branch
-Release: 0.%kde_snapshot.1
+Release: 0.%kde_snapshot.2
 %else
-Release: 1
+Release: 2
 %endif
 Epoch: 1
 Group: Graphical desktop/KDE
