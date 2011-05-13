@@ -26,7 +26,7 @@ Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: xscreensaver-base
 BuildRequires: mesaglu-devel
 BuildRequires: eigen2
-BuildRequires: kdebase4-workspace-devel >= 2:%version
+BuildRequires: kdebase4-workspace-devel >= 2:4.6.0
 BuildRequires: kdegraphics4-devel
 BuildRequires: libxt-devel
 Suggests: %{name}-emoticons
