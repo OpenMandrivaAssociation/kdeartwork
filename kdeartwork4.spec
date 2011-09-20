@@ -1,27 +1,12 @@
-%define branch 0
-%{?_branch: %{expand: %%global branch 1}}
-
-%if %branch
-%define kde_snapshot svn1198704
-%endif
-
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.6.4
-%if %branch
-Release: 0.%kde_snapshot.2
-%else
+Version: 4.7.41
 Release: 1
-%endif
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-%if %branch
-Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/kdeartwork-%version%kde_snapshot.tar.bz2
-%else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.bz2
-%endif
 Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: xscreensaver-base
 BuildRequires: mesaglu-devel
@@ -41,7 +26,6 @@ Obsoletes: kdeartwork4-core
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
 %files
-%defattr(-,root,root,-)
 %doc README
 
 #-------------------------------------------------------------------------
@@ -57,7 +41,6 @@ Obsoletes: %name-icons-theme-nuvola < %epoch:%version-%release
 nuvola icons theme
 
 %files icons-theme-nuvola
-%defattr(-,root,root,-)
 %_kde_iconsdir/nuvola
 
 #-------------------------------------------------------------------------
@@ -72,7 +55,6 @@ Obsoletes: %name-emoticons < %epoch:%version-%release
 %{name} emoticons.
 
 %files emoticons
-%defattr(-,root,root)
 %_kde_datadir/emoticons/*
 
 #-------------------------------------------------------------------------
@@ -87,7 +69,6 @@ Obsoletes: %name-sounds < %epoch:%version-%release
 %{name} sounds.
 
 %files sounds
-%defattr(-,root,root)
 %_kde_datadir/sounds/KDE_Logout_new.wav
 %_kde_datadir/sounds/KDE_Startup_new.wav
 
@@ -102,7 +83,6 @@ Conflicts: kdebase-workspace < 2:4.5.68
 %{name} styles.
 
 %files styles
-%defattr(-,root,root)
 %_kde_appsdir/kstyle
 %_kde_libdir/kde4/kstyle_phase_config.so
 %_kde_libdir/kde4/plugins/styles/phasestyle.so
@@ -135,7 +115,6 @@ Obsoletes: %name-color-schemes < %epoch:%version-%release
 %{name} color schemes.
 
 %files color-schemes
-%defattr(-,root,root)
 %_kde_appsdir/color-schemes
 
 #-------------------------------------------------------------------------
@@ -150,7 +129,6 @@ Obsoletes: %name-wallpapers < %epoch:%version-%release
 %{name} wallpapers.
 
 %files wallpapers
-%defattr(-,root,root)
 %_kde_datadir/wallpapers/*
 
 #-------------------------------------------------------------------------
@@ -165,7 +143,6 @@ Obsoletes: %name-aurorae-themes-air-oxygen < %epoch:%version-%release
 %{name} wallpapers.
 
 %files aurorae-themes-air-oxygen
-%defattr(-,root,root)
 %_kde_appsdir/aurorae/themes/Air-Oxygen
 
 #-------------------------------------------------------------------------
@@ -180,7 +157,6 @@ Obsoletes: %name-aurorae-themes-oxygen < %epoch:%version-%release
 %{name} wallpapers.
 
 %files aurorae-themes-oxygen
-%defattr(-,root,root)
 %_kde_appsdir/aurorae/themes/Oxygen
 
 #-----------------------------------------------------------------------------
@@ -197,7 +173,6 @@ Obsoletes: plasma-desktoptheme-aya < %epoch:%version-%release
 Plasma aya desktopthemes.
 
 %files -n plasma-desktoptheme-aya
-%defattr(-,root,root)
 %_kde_appsdir/desktoptheme/Aya
 
 #-----------------------------------------------------------------------------
@@ -214,7 +189,6 @@ Obsoletes: plasma-desktoptheme-slim-glow < %epoch:%version-%release
 Plasma slim-glow desktopthemes.
 
 %files -n plasma-desktoptheme-slim-glow
-%defattr(-,root,root)
 %_kde_appsdir/desktoptheme/slim-glow
 
 #-----------------------------------------------------------------------------
@@ -222,19 +196,11 @@ Plasma slim-glow desktopthemes.
 %package kscreensaver
 Summary: %{name} kscreensaver
 Group: Graphical desktop/KDE
-%if %mdkversion >= 201000
-Obsoletes: kdeartwork-screensavers < 3.5.10-1
-Obsoletes: kdeartwork3-screensavers < 3.5.10-1
-Obsoletes: kdeartwork-screensavers-gl < 3.5.10-1
-Obsoletes: kdeartwork3-screensavers-gl < 3.5.10-1
-%endif
-Obsoletes: %name-kscreensaver < %epoch:%version-%release
 
 %description kscreensaver
 %{name} kscreensaver.
 
 %files kscreensaver
-%defattr(-,root,root)
 %_kde_appsdir/kfiresaver
 %_kde_appsdir/kscreensaver
 %_kde_bindir/*.kss
@@ -245,21 +211,12 @@ Obsoletes: %name-kscreensaver < %epoch:%version-%release
 #-----------------------------------------------------------------------------
 
 %prep
-%if %branch
-%setup -q -n kdeartwork-%version%kde_snapshot
-%else
 %setup -q -n kdeartwork-%version
-%endif
 
 %build
 %cmake_kde4
 %make
 
 %install
-rm -fr %buildroot
-
 %makeinstall_std -C build
-
-%clean
-rm -fr %buildroot
 
