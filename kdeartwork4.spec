@@ -44,6 +44,19 @@ nuvola icons theme
 
 #-------------------------------------------------------------------------
 
+%package icons-theme-mono
+Summary:  Mono Icons from kde4
+Group: Graphical desktop/KDE
+Buildarch: noarch
+
+%description icons-theme-mono
+Mono icons theme
+
+%files icons-theme-mono
+%_kde_iconsdir/mono
+
+#-------------------------------------------------------------------------
+
 %package emoticons
 Summary: %{name} emoticons
 Group: Graphical desktop/KDE
@@ -173,6 +186,51 @@ Plasma aya desktopthemes.
 
 %files -n plasma-desktoptheme-aya
 %_kde_appsdir/desktoptheme/Aya
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-androbit
+Summary: Plasma androbit desktopthemes
+Group: Graphical desktop/KDE
+Provides: plasma-desktoptheme
+Buildarch: noarch
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-androbit
+Plasma androbit desktopthemes.
+
+%files -n plasma-desktoptheme-androbit
+%_kde_appsdir/desktoptheme/Androbit
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-produkt
+Summary: Plasma produkt desktopthemes
+Group: Graphical desktop/KDE
+Provides: plasma-desktoptheme
+Buildarch: noarch
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-produkt
+Plasma produkt desktopthemes.
+
+%files -n plasma-desktoptheme-produkt
+%_kde_appsdir/desktoptheme/Produkt
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-tibanna
+Summary: Plasma tibanna desktopthemes
+Group: Graphical desktop/KDE
+Provides: plasma-desktoptheme
+Buildarch: noarch
+Conflicts: extragear-plasma < 4.0.82
+
+%description -n plasma-desktoptheme-tibanna
+Plasma tibanna desktopthemes.
+
+%files -n plasma-desktoptheme-tibanna
+%_kde_appsdir/desktoptheme/Tibanna
 
 #-----------------------------------------------------------------------------
 
