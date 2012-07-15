@@ -1,12 +1,12 @@
 Name: kdeartwork4
 Summary: K Desktop Environment
-Version: 4.8.4
+Version: 4.8.97
 Release: 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.kde.org
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.xz
+Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/kdeartwork-%version.tar.xz
 Buildroot: %_tmppath/%name-%version-%release-root
 BuildRequires: xscreensaver-base
 BuildRequires: mesaglu-devel
