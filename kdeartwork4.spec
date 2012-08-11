@@ -256,7 +256,6 @@ Group:		Graphical desktop/KDE
 
 %prep
 %setup -q -n kdeartwork-%{version}
-%patch0 -p1
 
 %build
 %cmake_kde4
