@@ -1,25 +1,25 @@
-Name: kdeartwork4
-Summary: K Desktop Environment
-Version: 4.9.0
-Release: 1
-Epoch: 1
-Group: Graphical desktop/KDE
-License: GPL
-URL: http://www.kde.org
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdeartwork-%version.tar.xz
-Buildroot: %_tmppath/%name-%version-%release-root
-BuildRequires: xscreensaver-base
-BuildRequires: mesaglu-devel
-BuildRequires: eigen2
-BuildRequires: kdebase4-workspace-devel >= 2:4.6.0
-BuildRequires: libxt-devel
-Suggests: %{name}-emoticons
-Suggests: %{name}-kscreensaver
-Suggests: %{name}-sounds
-Suggests: %{name}-styles
-Suggests: %{name}-wallpapers
-Suggests: %{name}-color-schemes
-Obsoletes: kdeartwork4-core
+Name:		kdeartwork4
+Summary:	K Desktop Environment
+Version:	4.9.0
+Release:	1
+Epoch:		1
+Group:		Graphical desktop/KDE
+License:	GPL
+URL:		http://www.kde.org
+Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/kdeartwork-%{version}.tar.xz
+Patch0:		kdeartwork-4.8.2-l10n-ru.patch
+BuildRequires:	kdebase4-workspace-devel
+BuildRequires:	xscreensaver-base
+BuildRequires:	pkgconfig(eigen2)
+BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(libkexiv2)
+BuildRequires:	pkgconfig(xt)
+Suggests:	%{name}-emoticons
+Suggests:	%{name}-kscreensaver
+Suggests:	%{name}-sounds
+Suggests:	%{name}-styles
+Suggests:	%{name}-wallpapers
+Suggests:	%{name}-color-schemes
 
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
@@ -256,6 +256,7 @@ Group:		Graphical desktop/KDE
 
 %prep
 %setup -q -n kdeartwork-%{version}
+%patch0 -p1
 
 %build
 %cmake_kde4
