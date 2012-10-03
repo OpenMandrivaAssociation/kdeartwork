@@ -1,12 +1,12 @@
 Name:		kdeartwork4
 Summary:	K Desktop Environment
-Version:	4.9.0
-Release:	1
+Version: 4.9.2
+Release: 1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
 URL:		http://www.kde.org
-Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/kdeartwork-%{version}.tar.xz
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdeartwork-%{version}.tar.xz
 Patch0:		kdeartwork-4.8.2-l10n-ru.patch
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	xscreensaver-base
