@@ -1,0 +1,55 @@
+diff -urN kdeartwork-4.8.2.orig/wallpapers/Aghi/metadata.desktop kdeartwork-4.8.2/wallpapers/Aghi/metadata.desktop
+--- kdeartwork-4.8.2.orig/wallpapers/Aghi/metadata.desktop	2012-03-01 03:04:29.000000000 +0400
++++ kdeartwork-4.8.2/wallpapers/Aghi/metadata.desktop	2012-04-19 02:53:26.994474845 +0400
+@@ -18,6 +18,7 @@
+ Name[pl]=Aghi
+ Name[pt]=Aghi
+ Name[pt_BR]=Aghi
++Name[ru]=Aghi
+ Name[sk]=Aghi
+ Name[sl]=Aghi
+ Name[sr]=Аги
+diff -urN kdeartwork-4.8.2.orig/wallpapers/Evening/metadata.desktop kdeartwork-4.8.2/wallpapers/Evening/metadata.desktop
+--- kdeartwork-4.8.2.orig/wallpapers/Evening/metadata.desktop	2012-03-01 03:04:29.000000000 +0400
++++ kdeartwork-4.8.2/wallpapers/Evening/metadata.desktop	2012-04-19 02:53:48.693470937 +0400
+@@ -18,6 +18,7 @@
+ Name[pl]=Wieczór
+ Name[pt]=Noite
+ Name[pt_BR]=Fim de tarde
++Name[ru]=Вечер
+ Name[sk]=Podvečer
+ Name[sl]=Večer
+ Name[sr]=Вече
+diff -urN kdeartwork-4.8.2.orig/wallpapers/Fields_of_Peace/metadata.desktop kdeartwork-4.8.2/wallpapers/Fields_of_Peace/metadata.desktop
+--- kdeartwork-4.8.2.orig/wallpapers/Fields_of_Peace/metadata.desktop	2012-03-01 03:04:29.000000000 +0400
++++ kdeartwork-4.8.2/wallpapers/Fields_of_Peace/metadata.desktop	2012-04-19 02:54:08.003471869 +0400
+@@ -18,6 +18,7 @@
+ Name[pl]=Pola pokoju
+ Name[pt]=Campos de Paz
+ Name[pt_BR]=Campos de paz
++Name[ru]=Поля гармонии
+ Name[sk]=Polia mieru
+ Name[sl]=Polja miru
+ Name[sr]=Пољана спокоја
+diff -urN kdeartwork-4.8.2.orig/wallpapers/Quadros/metadata.desktop kdeartwork-4.8.2/wallpapers/Quadros/metadata.desktop
+--- kdeartwork-4.8.2.orig/wallpapers/Quadros/metadata.desktop	2012-03-01 03:04:29.000000000 +0400
++++ kdeartwork-4.8.2/wallpapers/Quadros/metadata.desktop	2012-04-19 02:54:55.560471250 +0400
+@@ -18,6 +18,7 @@
+ Name[pl]=Quadros
+ Name[pt]=Quadros
+ Name[pt_BR]=Quadros
++Name[ru]=Quadros
+ Name[sk]=Quadros
+ Name[sl]=Quadros
+ Name[sr]=Квадрос
+diff -urN kdeartwork-4.8.2.orig/wallpapers/Red_Leaf/metadata.desktop kdeartwork-4.8.2/wallpapers/Red_Leaf/metadata.desktop
+--- kdeartwork-4.8.2.orig/wallpapers/Red_Leaf/metadata.desktop	2012-03-01 03:04:29.000000000 +0400
++++ kdeartwork-4.8.2/wallpapers/Red_Leaf/metadata.desktop	2012-04-19 02:55:14.102474296 +0400
+@@ -18,6 +18,7 @@
+ Name[pl]=Czerwony liść
+ Name[pt]=Folha Vermelha
+ Name[pt_BR]=Folha vermelha
++Name[ru]=Красный листок
+ Name[sk]=Červený list
+ Name[sl]=Rdeč list
+ Name[sr]=Црвени листак
