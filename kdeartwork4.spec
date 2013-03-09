@@ -1,6 +1,6 @@
 Name:		kdeartwork4
 Summary:	K Desktop Environment
-Version:	4.10.0
+Version:	4.10.1
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -243,10 +243,13 @@ Group:		Graphical desktop/KDE
 %makeinstall_std -C build
 
 %changelog
+* Sat Mar 09 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.1-1
+- New version 4.10.1
+
 * Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.0-1
 - New version 4.10.0
-- Drop and obsolete aurorae-themes-air-oxygen and aurorae-themes-oxygen as
-  upstream did so
+- Drop and obsolete aurorae-themes-air-oxygen and aurorae-themes-oxygen
+  subpackages as upstream did so
 - Add Conflicts on older kde-wallpapers because some wallpapers were moved
   from it to kdeartwork4 in 4.10.0
 
