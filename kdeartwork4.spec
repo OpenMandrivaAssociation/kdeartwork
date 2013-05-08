@@ -7,7 +7,6 @@ Group:		Graphical desktop/KDE
 License:	GPL
 URL:		http://www.kde.org
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdeartwork-%{version}.tar.xz
-Patch0:		kdeartwork-4.8.2-l10n-ru.patch
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	xscreensaver-base
 BuildRequires:	pkgconfig(eigen2)
@@ -233,7 +232,6 @@ Group:		Graphical desktop/KDE
 
 %prep
 %setup -q -n kdeartwork-%{version}
-%patch0 -p1
 
 %build
 %cmake_kde4
@@ -245,6 +243,7 @@ Group:		Graphical desktop/KDE
 %changelog
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.3-1
 - New version 4.10.3
+- Drop no longer needed l10n-ru patch
 
 * Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.2-1
 - New version 4.10.2
