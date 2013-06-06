@@ -1,11 +1,11 @@
+Summary:	Additional artwork (themes, sound themes, icons,etc...) for KDE
 Name:		kdeartwork4
-Summary:	K Desktop Environment
-Version:	4.10.3
+Version:	4.10.4
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
-URL:		http://www.kde.org
+Url:		http://www.kde.org
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdeartwork-%{version}.tar.xz
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	xscreensaver-base
@@ -241,6 +241,10 @@ Group:		Graphical desktop/KDE
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 05 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.4-1
+- New version 4.10.4
+- Fix main summary
+
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.3-1
 - New version 4.10.3
 - Drop no longer needed l10n-ru patch
