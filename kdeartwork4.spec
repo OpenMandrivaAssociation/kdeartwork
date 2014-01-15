@@ -3,8 +3,8 @@ Name:		kdeartwork4
 Version:	4.12.1
 Release:	1
 Epoch:		1
+License:	GPLv2+
 Group:		Graphical desktop/KDE
-License:	GPL
 Url:		http://www.kde.org
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdeartwork-%{version}.tar.xz
 BuildRequires:	kdebase4-workspace-devel
@@ -16,9 +16,9 @@ BuildRequires:	pkgconfig(xt)
 Conflicts:	kde-wallpapers < 2:4.10.0
 Obsoletes:	kdeartwork4-aurorae-themes-air-oxygen < 1:4.10.0
 Obsoletes:	kdeartwork4-aurorae-themes-oxygen < 1:4.10.0
+Obsoletes:	kdeartwork4-sounds < 1:4.12.0
 Suggests:	%{name}-emoticons
 Suggests:	%{name}-kscreensaver
-Suggests:	%{name}-sounds
 Suggests:	%{name}-styles
 Suggests:	%{name}-wallpapers
 Suggests:	%{name}-color-schemes
@@ -31,30 +31,16 @@ Additional artwork (themes, sound themes, icons,etc...) for KDE.
 
 #-------------------------------------------------------------------------
 
-%package icons-theme-nuvola
-Summary:	Default Icons from kde4
-Group:		Graphical desktop/KDE
-Buildarch:	noarch
-Obsoletes:	%{name}-icons-theme-nuvola < %{EVRD}
-
-%description icons-theme-nuvola
-nuvola icons theme
-
-%files icons-theme-nuvola
-%{_kde_iconsdir}/nuvola
-
-#-------------------------------------------------------------------------
-
-%package icons-theme-mono
-Summary:	Mono Icons from kde4
+%package color-schemes
+Summary:	%{name} color schemes
 Group:		Graphical desktop/KDE
 Buildarch:	noarch
 
-%description icons-theme-mono
-Mono icons theme
+%description color-schemes
+%{name} color schemes.
 
-%files icons-theme-mono
-%{_kde_iconsdir}/mono
+%files color-schemes
+%{_kde_appsdir}/color-schemes
 
 #-------------------------------------------------------------------------
 
@@ -72,17 +58,117 @@ Obsoletes:	%{name}-emoticons < %{EVRD}
 
 #-------------------------------------------------------------------------
 
-%package sounds
-Summary:	%{name} sounds
+%package icons-theme-mono
+Summary:	Mono Icons from kde4
 Group:		Graphical desktop/KDE
 Buildarch:	noarch
 
-%description sounds
-%{name} sounds.
+%description icons-theme-mono
+Mono icons theme
 
-%files sounds
-%{_kde_datadir}/sounds/KDE_Logout_new.wav
-%{_kde_datadir}/sounds/KDE_Startup_new.wav
+%files icons-theme-mono
+%{_kde_iconsdir}/mono
+
+#-------------------------------------------------------------------------
+
+%package icons-theme-nuvola
+Summary:	Default Icons from kde4
+Group:		Graphical desktop/KDE
+Buildarch:	noarch
+Obsoletes:	%{name}-icons-theme-nuvola < %{EVRD}
+
+%description icons-theme-nuvola
+nuvola icons theme
+
+%files icons-theme-nuvola
+%{_kde_iconsdir}/nuvola
+
+#-----------------------------------------------------------------------------
+
+%package kscreensaver
+Summary:	%{name} kscreensaver
+Group:		Graphical desktop/KDE
+
+%description kscreensaver
+%{name} kscreensaver.
+
+%files kscreensaver
+%{_kde_appsdir}/kfiresaver
+%{_kde_appsdir}/kscreensaver
+%{_kde_bindir}/*.kss
+%{_kde_services}/ScreenSavers/*
+%{_kde_bindir}/kxsconfig
+%{_kde_bindir}/kxsrun
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-androbit
+Summary:	Plasma androbit desktopthemes
+Group:		Graphical desktop/KDE
+Provides:	plasma-desktoptheme
+Buildarch:	noarch
+
+%description -n plasma-desktoptheme-androbit
+Plasma androbit desktopthemes.
+
+%files -n plasma-desktoptheme-androbit
+%{_kde_appsdir}/desktoptheme/Androbit
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-aya
+Summary:	Plasma aya desktopthemes
+Group:		Graphical desktop/KDE
+Provides:	plasma-desktoptheme
+Buildarch:	noarch
+
+%description -n plasma-desktoptheme-aya
+Plasma aya desktopthemes.
+
+%files -n plasma-desktoptheme-aya
+%{_kde_appsdir}/desktoptheme/Aya
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-produkt
+Summary:	Plasma produkt desktopthemes
+Group:		Graphical desktop/KDE
+Provides:	plasma-desktoptheme
+Buildarch:	noarch
+
+%description -n plasma-desktoptheme-produkt
+Plasma produkt desktopthemes.
+
+%files -n plasma-desktoptheme-produkt
+%{_kde_appsdir}/desktoptheme/Produkt
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-slim-glow
+Summary:	Plasma slim-glow desktopthemes
+Group:		Graphical desktop/KDE
+Provides:	plasma-desktoptheme
+Buildarch:	noarch
+
+%description -n plasma-desktoptheme-slim-glow
+Plasma slim-glow desktopthemes.
+
+%files -n plasma-desktoptheme-slim-glow
+%{_kde_appsdir}/desktoptheme/slim-glow
+
+#-----------------------------------------------------------------------------
+
+%package -n plasma-desktoptheme-tibanna
+Summary:	Plasma tibanna desktopthemes
+Group:		Graphical desktop/KDE
+Provides:	plasma-desktoptheme
+Buildarch:	noarch
+
+%description -n plasma-desktoptheme-tibanna
+Plasma tibanna desktopthemes.
+
+%files -n plasma-desktoptheme-tibanna
+%{_kde_appsdir}/desktoptheme/Tibanna
 
 #-------------------------------------------------------------------------
 
@@ -117,19 +203,6 @@ Conflicts:	kdebase4-workspace < 2:4.5.68
 
 #-------------------------------------------------------------------------
 
-%package color-schemes
-Summary:	%{name} color schemes
-Group:		Graphical desktop/KDE
-Buildarch:	noarch
-
-%description color-schemes
-%{name} color schemes.
-
-%files color-schemes
-%{_kde_appsdir}/color-schemes
-
-#-------------------------------------------------------------------------
-
 %package wallpapers
 Summary:	%{name} wallpapers
 Group:		Graphical desktop/KDE
@@ -140,93 +213,6 @@ Buildarch:	noarch
 
 %files wallpapers
 %{_kde_datadir}/wallpapers/*
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-aya
-Summary:	Plasma aya desktopthemes
-Group:		Graphical desktop/KDE
-Provides:	plasma-desktoptheme
-Buildarch:	noarch
-
-%description -n plasma-desktoptheme-aya
-Plasma aya desktopthemes.
-
-%files -n plasma-desktoptheme-aya
-%{_kde_appsdir}/desktoptheme/Aya
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-androbit
-Summary:	Plasma androbit desktopthemes
-Group:		Graphical desktop/KDE
-Provides:	plasma-desktoptheme
-Buildarch:	noarch
-
-%description -n plasma-desktoptheme-androbit
-Plasma androbit desktopthemes.
-
-%files -n plasma-desktoptheme-androbit
-%{_kde_appsdir}/desktoptheme/Androbit
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-produkt
-Summary:	Plasma produkt desktopthemes
-Group:		Graphical desktop/KDE
-Provides:	plasma-desktoptheme
-Buildarch:	noarch
-
-%description -n plasma-desktoptheme-produkt
-Plasma produkt desktopthemes.
-
-%files -n plasma-desktoptheme-produkt
-%{_kde_appsdir}/desktoptheme/Produkt
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-tibanna
-Summary:	Plasma tibanna desktopthemes
-Group:		Graphical desktop/KDE
-Provides:	plasma-desktoptheme
-Buildarch:	noarch
-
-%description -n plasma-desktoptheme-tibanna
-Plasma tibanna desktopthemes.
-
-%files -n plasma-desktoptheme-tibanna
-%{_kde_appsdir}/desktoptheme/Tibanna
-
-#-----------------------------------------------------------------------------
-
-%package -n plasma-desktoptheme-slim-glow
-Summary:	Plasma slim-glow desktopthemes
-Group:		Graphical desktop/KDE
-Provides:	plasma-desktoptheme
-Buildarch:	noarch
-
-%description -n plasma-desktoptheme-slim-glow
-Plasma slim-glow desktopthemes.
-
-%files -n plasma-desktoptheme-slim-glow
-%{_kde_appsdir}/desktoptheme/slim-glow
-
-#-----------------------------------------------------------------------------
-
-%package kscreensaver
-Summary:	%{name} kscreensaver
-Group:		Graphical desktop/KDE
-
-%description kscreensaver
-%{name} kscreensaver.
-
-%files kscreensaver
-%{_kde_appsdir}/kfiresaver
-%{_kde_appsdir}/kscreensaver
-%{_kde_bindir}/*.kss
-%{_kde_services}/ScreenSavers/*
-%{_kde_bindir}/kxsconfig
-%{_kde_bindir}/kxsrun
 
 #-----------------------------------------------------------------------------
 
@@ -243,6 +229,8 @@ Group:		Graphical desktop/KDE
 %changelog
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.1-1
 - New version 4.12.1
+- Drop sounds subpackage as it's no longer provided by upstream
+- Sort subpackages
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.11.4-1
 - New version 4.11.4
