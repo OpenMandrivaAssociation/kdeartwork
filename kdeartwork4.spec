@@ -1,6 +1,6 @@
 Summary:	Additional artwork (themes, sound themes, icons,etc...) for KDE
 Name:		kdeartwork4
-Version:	4.12.2
+Version:	4.12.3
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -227,6 +227,9 @@ Buildarch:	noarch
 %makeinstall_std -C build
 
 %changelog
+* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.3-1
+- New version 4.12.3
+
 * Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.2-1
 - New version 4.12.2
 
