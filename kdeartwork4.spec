@@ -1,12 +1,12 @@
 Summary:	Additional artwork (themes, sound themes, icons,etc...) for KDE
 Name:		kdeartwork4
-Version:	4.14.3
-Release:	2
+Version:	14.12.0
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdeartwork-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/kdeartwork-%{version}.tar.xz
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	xscreensaver-base
 BuildRequires:	pkgconfig(eigen2)
