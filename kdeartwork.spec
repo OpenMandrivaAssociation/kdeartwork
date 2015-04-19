@@ -6,7 +6,7 @@ Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/kdeartwork-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdebase4-workspace-devel
 BuildRequires:	xscreensaver-base
 BuildRequires:	pkgconfig(eigen2)
