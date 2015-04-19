@@ -1,6 +1,6 @@
 Summary:	Additional artwork (themes, sound themes, icons,etc...) for KDE
 Name:		kdeartwork4
-Version:	14.12.0
+Version:	15.04.0
 Release:	1
 Epoch:		1
 License:	GPLv2+
