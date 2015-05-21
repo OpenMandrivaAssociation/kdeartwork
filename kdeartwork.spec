@@ -1,13 +1,13 @@
 Summary:	Additional artwork (themes, sound themes, icons,etc...) for KDE
-Name:		kdeartwork4
-Version:	15.04.0
+Name:		kdeartwork
+Version:	15.04.1
 Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdebase4-workspace-devel
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	kde-workspace-devel
 BuildRequires:	xscreensaver-base
 BuildRequires:	pkgconfig(eigen2)
 BuildRequires:	pkgconfig(glu)
@@ -22,6 +22,7 @@ Suggests:	%{name}-kscreensaver
 Suggests:	%{name}-styles
 Suggests:	%{name}-wallpapers
 Suggests:	%{name}-color-schemes
+%rename		kdeartwork4
 
 %description
 Additional artwork (themes, sound themes, icons,etc...) for KDE.
