@@ -1,6 +1,6 @@
 Summary:	Additional artwork (themes, sound themes, icons,etc...) for KDE
 Name:		kdeartwork
-Version:	15.04.1
+Version:	15.04.2
 Release:	1
 Epoch:		1
 License:	GPLv2+
