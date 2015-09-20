@@ -1,7 +1,7 @@
 Summary:	Additional artwork (themes, sound themes, icons,etc...) for KDE
 Name:		kdeartwork
-Version:	15.04.3
-Release:	3
+Version:	15.08.1
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -9,7 +9,7 @@ Url:		http://www.kde.org
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kde-workspace-devel
 BuildRequires:	xscreensaver-base
-BuildRequires:	pkgconfig(eigen2)
+BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libkexiv2)
 BuildRequires:	pkgconfig(xt)
@@ -221,7 +221,7 @@ Buildarch:	noarch
 %setup -q -n kdeartwork-%{version}
 
 %build
-%cmake_kde4
+%cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=3.1
 %make
 
 %install
